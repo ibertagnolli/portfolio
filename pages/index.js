@@ -1,6 +1,36 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
+
+// index.html
+import { useState } from 'react';
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>;
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+  const [likes, setLikes] = useState(0);
+
+  function handleClick() {
+    setLikes(likes + 1);
+  }
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <button onClick={handleClick}>Like ({likes})</button>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -12,8 +42,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <img className={styles.image} src="/images/mtn_banner.jpeg" alt="mountain banner photo"/>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        Hello welcome to my Portfolio Website!!
         </h1>
 
         <p className={styles.description}>
@@ -22,6 +53,9 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
+        <h1 className="title">
+        <Link href="/about">about</Link>
+        </h1>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -67,3 +101,4 @@ export default function Home() {
     </div>
   )
 }
+
