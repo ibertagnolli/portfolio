@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 // index.html
 import { useState } from 'react';
-function Header({ title }) {
-  return <h1>{title ? title : 'Default title'}</h1>;
+function Header(props) {
+  return <h1>{props.title ? props.title : 'Default title'}</h1>;
 }
 
 function HomePage() {
