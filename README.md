@@ -1,4 +1,4 @@
-#Portfolio 
+# Portfolio 
 
 In an effort to teach myself react. I started rewriting my portfolio website using Next.js. This is very rough around the edges and I hope to polish it this summer. Ultimately it will end up being a new and better version of my existing portfolio. Go check it out if your interested. 
 
