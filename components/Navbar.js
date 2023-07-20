@@ -1,8 +1,11 @@
+import Button from "@mui/material/Button";
+import { useRouter } from "next/router";
 
 export default function Navbar({links}) {
-
+    const router = useRouter();
     return (
         <div style={{
+            top: "0",
             position: "sticky", 
             height: 64, 
             width: "100vw", 
@@ -14,11 +17,21 @@ export default function Navbar({links}) {
             alignItems: "center", 
             zIndex: 69,
         }}>
-            <h2>Isabella Bertagnolli</h2>
+            <h2 style={{color:"white"}}>Isabella Bertagnolli</h2>
             <div style={{display: "flex", gap: "1rem"}}>
                 {
                     links.map(link => (
-                        <button onClick={() => alert(link.path)} key={link.path}>{link.text}</button>
+                        <Button 
+                        onClick={() => router.push(link.path)} key={link.path}
+                        variant="text"
+                        sx={{
+                          color: "white",
+                          borderColor: "white",
+                          ":hover": {
+                            backgroundcolor: "white"
+                          }
+                        }}
+                        >{link.text}</Button>
                     ))
                 }
             </div>
