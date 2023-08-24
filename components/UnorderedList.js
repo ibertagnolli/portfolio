@@ -1,10 +1,10 @@
 
 
-function UnorderedList({items, fontColor = 'inherit'}) {
+function UnorderedList({items, fontColor}) {
     // const items = props.items;
 
     return (
-        <ul style={{color: fontColor}}>
+        <ul style={{color: fontColor, listStyleType: "none", justifyContent:"left"}}>
             {items.map(item => <li>{item}</li>)}
         </ul>
     );
