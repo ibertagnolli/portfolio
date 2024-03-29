@@ -8,6 +8,7 @@ export default function MainPage() {
             <Navbar links={[
                 {text: "Home", path: "/"},
                 {text: "about", path: "/about"},
+                {text: "portfolio", path: "/portfolio"},
             ]} bgcolor = "transparent"/>
             <Jumbotron/>
             <MainPageHeader/>

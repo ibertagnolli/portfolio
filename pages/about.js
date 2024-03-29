@@ -12,12 +12,12 @@ export default function About() {
                 links={[
                     { text: "Home", path: "/" },
                     { text: "about", path: "/about" },
+					{text: "portfolio", path: "/portfolio"},
                    
                 ]}
                 bgcolor="transparent"
             />
             <div style={{display: "flex", marginTop: "64px", flexDirection: "column", width: "100%"}}>
-                <div style={{display: "flex", alignItems: "center", justifyContent: "center", height: "150px"}}><h1 style={{letterSpacing: "8px", fontSize: "48px"}}>About Me</h1></div>
                 <AboutMe
                     imgSrc="/images/resized_bella.jpeg"
                     name="Isabella Bertagnolli"
