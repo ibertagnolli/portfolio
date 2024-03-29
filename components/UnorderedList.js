@@ -5,7 +5,7 @@ function UnorderedList({items, fontColor}) {
 
     return (
         <ul style={{color: fontColor, listStyleType: "none", justifyContent:"left"}}>
-            {items.map(item => <li>{item}</li>)}
+            {items.map((item, i) => <li key={i}>{item}</li>)}
         </ul>
     );
 }

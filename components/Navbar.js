@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
 import theme from "../styles/theme";
 
-export default function Navbar({links}) {
+export default function Navbar({links}, bgcolor) {
     const router = useRouter();
     return (
         <div style={{
@@ -17,7 +17,7 @@ export default function Navbar({links}) {
             justifyContent: "space-between", 
             alignItems: "center", 
             zIndex: 69,
-            backgroundColor: theme.colors.primary,
+            backgroundColor: bgcolor,
         }}>
             <h2 style={{color:"white"}}>Isabella Bertagnolli</h2>
             <div style={{display: "flex", gap: "1rem"}}>
